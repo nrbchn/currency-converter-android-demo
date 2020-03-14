@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/converter_edittext_source_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:digits="1234567890."
+        android:gravity="center"
+        android:inputType="numberSigned"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/converter_textview_source_currency"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/converter_textview_source_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:drawableEnd="@drawable/converter_ic_arrow_drop_down_black_24dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/converter_edittext_source_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/converter_edittext_source_value"
+        tools:text="USD" />
+
+    <EditText
+        android:id="@+id/converter_edittext_dest_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:digits="1234567890."
+        android:gravity="center"
+        android:inputType="numberSigned"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/converter_textview_source_currency"
+        app:layout_constraintTop_toBottomOf="@+id/converter_edittext_source_value"
+        tools:text="73" />
+
+    <TextView
+        android:id="@+id/converter_textview_dest_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:drawableEnd="@drawable/converter_ic_arrow_drop_down_black_24dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/converter_edittext_dest_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/converter_edittext_dest_value"
+        tools:text="RUB" />
+
+    <TextView
+        android:id="@+id/converter_textview_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/converter_edittext_dest_value"
+        tools:text="Actual date: 12.05.2020" />
+
+    <TextView
+        android:id="@+id/converter_textview_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/converter_update"
+        android:textColor="?attr/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/converter_textview_date"
+        app:layout_constraintStart_toStartOf="@+id/converter_textview_date"
+        app:layout_constraintTop_toBottomOf="@+id/converter_textview_date" />
+
+    <ProgressBar
+        android:id="@+id/converter_progressbar_update"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/converter_textview_update"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="@+id/converter_textview_update"
+        app:layout_constraintStart_toStartOf="@+id/converter_textview_update"
+        app:layout_constraintTop_toTopOf="@+id/converter_textview_update" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

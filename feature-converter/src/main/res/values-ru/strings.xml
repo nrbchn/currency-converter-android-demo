@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="converter_actual_date">Последнее обновление: %s</string>
+    <string name="converter_update">Обновить</string>
+</resources>
